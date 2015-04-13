@@ -49,7 +49,11 @@
      NSLog(@"%@", filme[@"dataLancamento"]);
      _lancamento.text = filme[@"dataLancamento"];
      _sinopse.text = filme[@"sinopse"];
+         _sinopse.numberOfLines = 0;
+         [_sinopse sizeToFit];
      _elenco.text = filme[@"elencoFilme"];
+         _elenco.numberOfLines = 0;
+         [_elenco sizeToFit];
     _diretor.text = filme[@"diretor"];
     _soundtrack.text = filme[@"soundtrack"];
     _genero.text = filme[@"generoFilme"];
