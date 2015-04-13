@@ -26,35 +26,25 @@
 - (void) loadFilme {
 
 PFQuery *query = [PFQuery queryWithClassName:@"filmes"];
-//[query selectKeys:@[@"nomeFilme"]];
 [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-    //NSLog(@"%@", objects);
     
     if(!error) {
 
         for(int i = 0; i != objects.count; i++)
         {
-        //PFObject *teste = objects[@"nome"];
         PFObject *user = [objects objectAtIndex:i];
         PFFile *foto = user[@"filmeFoto"];
         
-            //NSLog(@"%@", foto.url);
             [_fotoFilme addObject:foto.url];
             [_nomeFilme addObject:user[@"nomeFilme"]];
             [_diretorFilme addObject:user[@"diretor"]];
             [_dataFilme addObject:user[@"dataLancamento"]];
             [_generosFilme addObject:user[@"generoFilme"]];
-            //NSLog(@"%@", _fotoFilme);
             
         }
-                
-        //[_nomeFilme addObject:nil];
-        
     }
     
 }];
-//////////////////////// Fim Buscar
-    
 
 // Fim loadFilme
 }
@@ -64,7 +54,6 @@ PFQuery *query = [PFQuery queryWithClassName:@"filmes"];
 {
     return [self.fotoFilme copy];
 }
-
 
 //------------------------------------------------
 
@@ -79,6 +68,7 @@ PFQuery *query = [PFQuery queryWithClassName:@"filmes"];
 {
     return [self.diretorFilme copy];
 }
+
 //------------------------------------------------
 
 - (NSArray *)arrayDataFilme

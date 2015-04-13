@@ -197,7 +197,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1B89B7471AD2F72900BC855A /* Framework */ = {
+		1B89B7471AD2F72900BC855A /* Framework Parse */ = {
 			isa = PBXGroup;
 			children = (
 				1B89B78E1AD2F9BF00BC855A /* libsqlite3.dylib */,
@@ -218,12 +218,13 @@
 				1B89B7721AD2F95100BC855A /* ParseFacebookUtilsV4.framework */,
 				1B89B7731AD2F95100BC855A /* ParseUI.framework */,
 			);
-			name = Framework;
+			name = "Framework Parse";
 			sourceTree = "<group>";
 		};
 		1BAC88DE1AD320D200382C82 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A32E93171AD758520081B228 /* iTunesArtwork@2x.png */,
 				1BAADD521ADBEEDF00B7F0BC /* Layout Minha Agenda 01 Editar 01.png */,
 				1BAADD531ADBEEDF00B7F0BC /* Layout Minha Agenda 01 Excluir.png */,
 				1BAADD541ADBEEDF00B7F0BC /* Layout Minha Agenda 01 Voltar.png */,
@@ -279,31 +280,21 @@
 			isa = PBXGroup;
 			children = (
 				1BD0BE9C1AD2F57500595BBE /* AppDelegate.h */,
-				1BD1B9CE1AD70F3800D903D7 /* FilmeAgendaController.h */,
-				1BD1B9CF1AD70F3800D903D7 /* FilmeAgendaController.m */,
 				1BD0BE9D1AD2F57500595BBE /* AppDelegate.m */,
-				A3C59AFF1AD85F5000951997 /* AgendaController.h */,
-				A3C59B001AD85F5000951997 /* AgendaController.m */,
 				1BD29F351AD6BEF8003D54EA /* Main.storyboard */,
-				1BD31AA71AD55F2D00050B6C /* FilmeController.h */,
-				1BD31AA81AD55F2D00050B6C /* FilmeController.m */,
-				1BCCB4BB1AD4418500B70847 /* TabelaFilmeController.h */,
-				1BCCB4BC1AD4418500B70847 /* TabelaFilmeController.m */,
 				1BCCB4BE1AD468BC00B70847 /* Filme.h */,
 				1BCCB4BF1AD468BC00B70847 /* Filme.m */,
-				1BCCB4C11AD469A100B70847 /* FilmeStore.h */,
-				1BCCB4C21AD469A100B70847 /* FilmeStore.m */,
-				1B89B7951AD3035900BC855A /* cadastroUsuario.h */,
-				1B89B7961AD3035900BC855A /* cadastroUsuario.m */,
-				1BD29F2F1AD6B621003D54EA /* MYRIADPRO-BOLD.OTF */,
-				1BD29F301AD6B621003D54EA /* MYRIADPRO-REGULAR.OTF */,
-				1B89B7901AD2FB0C00BC855A /* telaLogin.h */,
-				A32E93171AD758520081B228 /* iTunesArtwork@2x.png */,
-				1B89B7911AD2FB0C00BC855A /* telaLogin.m */,
+				A30077AA1ADC3BF300E106A7 /* Agenda Controller */,
+				A30077AB1ADC3C0000E106A7 /* Filme Agenda Controller */,
+				A30077A91ADC3BE800E106A7 /* Filme Controller */,
+				A30077A81ADC3BDB00E106A7 /* Tabela Filme Controller */,
+				A30077A71ADC3BD300E106A7 /* Filme Store */,
+				A30077A61ADC3B8300E106A7 /* Tela Login */,
+				A30077A51ADC3B6B00E106A7 /* Cadastrar Usuário */,
 				1BAC88DE1AD320D200382C82 /* Images */,
 				1BD0BEA51AD2F57500595BBE /* Images.xcassets */,
 				1BD0BEA71AD2F57500595BBE /* LaunchScreen.xib */,
-				1B89B7471AD2F72900BC855A /* Framework */,
+				1B89B7471AD2F72900BC855A /* Framework Parse */,
 				1BD0BE981AD2F57500595BBE /* Supporting Files */,
 			);
 			path = GetMovie;
@@ -312,6 +303,8 @@
 		1BD0BE981AD2F57500595BBE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1BD29F301AD6B621003D54EA /* MYRIADPRO-REGULAR.OTF */,
+				1BD29F2F1AD6B621003D54EA /* MYRIADPRO-BOLD.OTF */,
 				1B89B7461AD2F6D100BC855A /* GetMovie-Bridging-Header.h */,
 				1BD0BE991AD2F57500595BBE /* Info.plist */,
 				1BD0BE9A1AD2F57500595BBE /* main.m */,
@@ -334,6 +327,69 @@
 				1BD0BEB31AD2F57500595BBE /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A30077A51ADC3B6B00E106A7 /* Cadastrar Usuário */ = {
+			isa = PBXGroup;
+			children = (
+				1B89B7951AD3035900BC855A /* cadastroUsuario.h */,
+				1B89B7961AD3035900BC855A /* cadastroUsuario.m */,
+			);
+			name = "Cadastrar Usuário";
+			sourceTree = "<group>";
+		};
+		A30077A61ADC3B8300E106A7 /* Tela Login */ = {
+			isa = PBXGroup;
+			children = (
+				1B89B7901AD2FB0C00BC855A /* telaLogin.h */,
+				1B89B7911AD2FB0C00BC855A /* telaLogin.m */,
+			);
+			name = "Tela Login";
+			sourceTree = "<group>";
+		};
+		A30077A71ADC3BD300E106A7 /* Filme Store */ = {
+			isa = PBXGroup;
+			children = (
+				1BCCB4C11AD469A100B70847 /* FilmeStore.h */,
+				1BCCB4C21AD469A100B70847 /* FilmeStore.m */,
+			);
+			name = "Filme Store";
+			sourceTree = "<group>";
+		};
+		A30077A81ADC3BDB00E106A7 /* Tabela Filme Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1BCCB4BB1AD4418500B70847 /* TabelaFilmeController.h */,
+				1BCCB4BC1AD4418500B70847 /* TabelaFilmeController.m */,
+			);
+			name = "Tabela Filme Controller";
+			sourceTree = "<group>";
+		};
+		A30077A91ADC3BE800E106A7 /* Filme Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1BD31AA71AD55F2D00050B6C /* FilmeController.h */,
+				1BD31AA81AD55F2D00050B6C /* FilmeController.m */,
+			);
+			name = "Filme Controller";
+			sourceTree = "<group>";
+		};
+		A30077AA1ADC3BF300E106A7 /* Agenda Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A3C59AFF1AD85F5000951997 /* AgendaController.h */,
+				A3C59B001AD85F5000951997 /* AgendaController.m */,
+			);
+			name = "Agenda Controller";
+			sourceTree = "<group>";
+		};
+		A30077AB1ADC3C0000E106A7 /* Filme Agenda Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1BD1B9CE1AD70F3800D903D7 /* FilmeAgendaController.h */,
+				1BD1B9CF1AD70F3800D903D7 /* FilmeAgendaController.m */,
+			);
+			name = "Filme Agenda Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

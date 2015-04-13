@@ -18,5 +18,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *conSenha;
 @property (weak, nonatomic) IBOutlet UILabel *textoEntrada;
 @property (weak, nonatomic) IBOutlet UIButton *cadastrarUsuario;
+@property (nonatomic) NSInteger status;
 
 @end

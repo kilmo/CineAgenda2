@@ -18,13 +18,6 @@
 @interface TabelaFilmeController()
 
 @property ( nonatomic, strong ) IBOutlet UITableView  *tabelaEstreia;
-/*
-@property NSMutableArray *nomeEstreia;
-@property NSMutableArray *diretorEstreia;
-@property NSMutableArray *dataEstreia;
-@property NSMutableArray *generosEstreia;
-@property NSMutableArray *cartazEstreia;
-@property NSArray *myObject;*/
 
 @end
 
@@ -33,11 +26,8 @@
 - (void)viewDidLoad
 
     {
-           [super viewDidLoad];
+    [super viewDidLoad];
       
-        
-        NSLog(@"Fotos: %@", [[FilmeStore sharedStore] arrayFotoFilme]);
-        
     self.tabelaEstreia.dataSource = self;
     self.tabelaEstreia.delegate = self;
  
@@ -50,8 +40,6 @@
     
     [super didReceiveMemoryWarning];
     
-    // Dispose of any resources that can be recreated.
-    
 }
 
 //------------------------------------------------
@@ -61,7 +49,6 @@
 {
     //permite que o tableView saiba o numero completo de itens das celulas
     
-//    return [_nomeEstreia count];
         return [[[FilmeStore sharedStore] arrayNomeFilme]count];
 }
 
@@ -72,20 +59,9 @@
     
     UIStoryboard * tela = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     
-    // Tela Agendar Filme
-    
-
-    
-    //
-
-    //[tableView scrollToRowAtIndexPath:indexPath atScrollPosition:self animated:YES
-    //faz com que ao clicar na celula ela te redirecione para uma nova view
-    
     FilmeController *tabelaDeFilmes = [tela instantiateViewControllerWithIdentifier:@"FilmeController"];
     
     NSString *stringNome = [[[FilmeStore sharedStore] arrayNomeFilme] objectAtIndex:indexPath.row];
-    
-    //NSLog(@"%@", stringNome);
     
     FilmeStore *store = [FilmeStore sharedStore];
     
@@ -131,28 +107,17 @@
     cell.textLabel.textColor = [UIColor clearColor];
     //Adiciona itens nas células da tabela cada label é uma linha nova
     
-    // Label Imagem do Filme
-//    for(NSString * str in _cartazEstreia){
-//        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(15, 15, 90, 120)];
-//        [imageView setImage:[UIImage imageNamed:str]];
-//        [cell addSubview:imageView];
-//    }
-    //cell.textLabel.textColor = [UIColor clearColor];
+
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 110, 150)];
-    //
+    
     // ----- Array para Fotos -------
-    //
-    // [[[FilmeStore sharedStore] arrayFotoFilme] objectAtIndex:indexPath.row]];
-    //[imageView setImage:[UIImage imageNamed:@"Layout Feed 01 Poster size.png"]];
+    
     NSURL *url = [NSURL URLWithString:[[[FilmeStore sharedStore] arrayFotoFilme] objectAtIndex:indexPath.row]];
     NSData *data = [[NSData alloc] initWithContentsOfURL:url];
     imageView.image = [UIImage imageWithData: data];
-    //*imageView = [[UIImageView alloc]initWithData:data];
-    //[imageview setImageWithURL:
-    //[imageView setImage:[[[FilmeStore sharedStore] arrayFotoFilme] objectAtIndex:indexPath.row]];
     [cell addSubview:imageView];
     
-
+    // ------ Fim Array Fotos ------
     
     
     // Botão Célula - Agendar Filme
@@ -160,9 +125,7 @@
     [button addTarget:self action:@selector(aparecerView:) forControlEvents:UIControlEventTouchUpInside];
     [button setBackgroundImage:[UIImage imageNamed:@"Layout Feed 01 Agenda.png"] forState: UIControlStateNormal];
     [button sizeToFit];
-    button.frame = CGRectMake(button.frame.origin.x,
-                                  button.frame.origin.y, 85, 30);
-    // Set a new (x,y) point for the button's center
+    button.frame = CGRectMake(button.frame.origin.x, button.frame.origin.y, 85, 30);
     button.center = CGPointMake(335, 135);
     
     [cell addSubview:button];
@@ -173,7 +136,7 @@
     UIFont *font = labelNome.font;
     labelNome.font = [font fontWithSize:14];
     NSString *nomeFilme = [NSString stringWithFormat:@"Filme: %@", [[[FilmeStore sharedStore] arrayNomeFilme] objectAtIndex:indexPath.row]];
-    //[labelNome setText:[[[FilmeStore sharedStore] arrayNomeFilme] objectAtIndex:indexPath.row]];
+    
     [labelNome setText:nomeFilme];
     [cell addSubview:labelNome];
     
@@ -181,9 +144,8 @@
     UILabel *labelDiretor = [[UILabel alloc] initWithFrame:CGRectMake(130, 40, 250, 20)];
     font = labelDiretor.font;
     labelDiretor.font = [font fontWithSize:14];
-    //[labelDiretor setText:[[self diretorEstreia] objectAtIndex:indexPath.row]];
     NSString *diretorFilme = [NSString stringWithFormat:@"Diretor: %@", [[[FilmeStore sharedStore] arrayDiretorFilme] objectAtIndex:indexPath.row]];
-    //[labelDiretor setText:[[[FilmeStore sharedStore] arrayDiretorFilme] objectAtIndex:indexPath.row]];
+    
     [labelDiretor setText:diretorFilme];
     [cell addSubview:labelDiretor];
     
@@ -192,9 +154,8 @@
     UILabel *labelGeneros = [[UILabel alloc] initWithFrame:CGRectMake(130, 60, 250, 20)];
     font = labelGeneros.font;
     labelGeneros.font = [font fontWithSize:14];
-    //[labelGeneros setText:[[self generosEstreia] objectAtIndex:indexPath.row]];
     NSString *generoFilme = [NSString stringWithFormat:@"Genero: %@", [[[FilmeStore sharedStore] arrayGenerosFilme] objectAtIndex:indexPath.row]];
-    //[labelGeneros setText:[[[FilmeStore sharedStore] arrayDataFilme] objectAtIndex:indexPath.row]];
+
     
     [labelGeneros setText:generoFilme];
     [cell addSubview:labelGeneros];
@@ -205,14 +166,8 @@
     font = labelData.font;
     labelData.font = [font fontWithSize:16];
     NSString *dataFilme = [NSString stringWithFormat:@"Data: %@", [[[FilmeStore sharedStore] arrayDataFilme] objectAtIndex:indexPath.row]];
-    //[labelData setText:[[self dataEstreia] objectAtIndex:indexPath.row]];
-       //[labelNome setText:[[[FilmeStore sharedStore] arrayDataFilme] objectAtIndex:indexPath.row]];
     [labelData setText:dataFilme];
     [cell addSubview:labelData];
-
-    
-     //cell.imageView.image = [UIImage imageNamed:@"image.png"];
-     
      
      return cell;
 }
