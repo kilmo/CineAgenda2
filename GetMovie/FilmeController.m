@@ -59,46 +59,6 @@
         }
         
     }];
-    
-<<<<<<< Updated upstream
-    PFQuery *query = [PFQuery queryWithClassName:@"filmes"]; //1
-     [query  whereKey:@"nomeFilme" equalTo:_nomeFilme.text];//2
-     [query findObjectsInBackgroundWithBlock:^(NSArray *filmeEsc, NSError *error) {
-     
-     if (!error) {
-         //[FilmeController setNeedsDisplay];
-         PFObject *filme = [filmeEsc objectAtIndex:0];
-     
-     NSLog(@"%@", filme[@"dataLancamento"]);
-     _lancamento.text = filme[@"dataLancamento"];
-     _sinopse.text = filme[@"sinopse"];
-         _sinopse.numberOfLines = 0;
-         [_sinopse sizeToFit];
-     _elenco.text = filme[@"elencoFilme"];
-         _elenco.numberOfLines = 0;
-         [_elenco sizeToFit];
-    _diretor.text = filme[@"diretor"];
-    _soundtrack.text = filme[@"soundtrack"];
-    _genero.text = filme[@"generoFilme"];
-    _classificacao.text = filme[@"rating"];
-    _duracao.text = filme[@"duration"];
-    _foto = filme[@"filmeFoto"];
-     
-         NSURL *url = [NSURL URLWithString:_foto];
-         NSData *data = [[NSData alloc] initWithContentsOfURL:url];
-         _fotoFilme.image = [UIImage imageWithData: data];
-     
-     }
-     else{
-     NSString *errorString = [[error userInfo] objectForKey:@"error"];
-     NSLog(@"Error: %@", errorString);
-     }
-     
-     }];
-//*/
-    self.view.backgroundColor = color;
-=======
->>>>>>> Stashed changes
 }
 //----------------------------------------------
 - (void) setarCores {

@@ -41,7 +41,7 @@
 
 
 - (IBAction)cadastrarUsuario:(id)sender {
-    [self cadastrar]
+    //[self cadastrar]
 }
 
 - (void) cadastrarUsuario {
