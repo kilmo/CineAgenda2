@@ -36,6 +36,7 @@
             <string>MyriadPro-Regular</string>
             <string>MyriadPro-Regular</string>
             <string>MyriadPro-Regular</string>
+            <string>MyriadPro-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -608,50 +609,40 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fhT-f7-DoC" userLabel="AgendarDia">
                                 <rect key="frame" x="34" y="127" width="60" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2b9-vS-2v9" userLabel="AgendarMes">
                                 <rect key="frame" x="117" y="127" width="60" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a8l-7M-clR" userLabel="AgendarAno">
                                 <rect key="frame" x="198" y="127" width="60" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YbS-dZ-ddZ" userLabel="NotificacaoDia">
                                 <rect key="frame" x="34" y="197" width="60" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uRt-xt-viV" userLabel="NotificacaoMes">
                                 <rect key="frame" x="117" y="197" width="60" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gg3-EK-p0D" userLabel="NotificacaoAno">
                                 <rect key="frame" x="198" y="197" width="60" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vezes por semana ( 1 á 7)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VdI-SA-LNQ">
-                                <rect key="frame" x="34" y="266" width="118" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vezes por dia" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yqz-mU-CTU">
-                                <rect key="frame" x="171" y="266" width="105" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Horários  ex: 12:00, 13:00" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jpB-Gv-qr4">
-                                <rect key="frame" x="34" y="311" width="188" height="30"/>
+                                <rect key="frame" x="34" y="339" width="188" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Push (Default)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PIM-n7-ePV">
-                                <rect key="frame" x="34" y="386" width="188" height="30"/>
+                                <rect key="frame" x="34" y="271" width="188" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -662,7 +653,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Frequência:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nfz-Ph-Xqc">
-                                <rect key="frame" x="34" y="236" width="78" height="30"/>
+                                <rect key="frame" x="34" y="309" width="78" height="30"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="14"/>
                                 <color key="textColor" red="0.81378235480000005" green="0.0" blue="0.057157068700000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -692,13 +683,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tipo de notificação:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0L-YI-TeE">
-                                <rect key="frame" x="34" y="355" width="125" height="30"/>
+                                <rect key="frame" x="34" y="240" width="125" height="30"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="14"/>
                                 <color key="textColor" red="0.81378235480000005" green="0.0" blue="0.057157068700000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfB-uW-GBK">
-                                <rect key="frame" x="248" y="270" width="42" height="21"/>
+                                <rect key="frame" x="241" y="450" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="13"/>
                                 <color key="textColor" red="0.81378235480000005" green="0.0" blue="0.057157068700000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -714,8 +705,15 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="botaoConfirmarNovoFilme:" destination="7RU-34-kqP" eventType="touchUpInside" id="t6X-Co-ppu"/>
+                                    <action selector="confirmar_button:" destination="OHX-gS-KN7" eventType="touchUpInside" id="3rK-q3-PFw"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKh-in-1qa">
+                                <rect key="frame" x="34" y="390" width="125" height="30"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="16"/>
+                                <state key="normal" title="DIAS DA SEMANA">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -736,7 +734,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="confirmarButton" destination="yuT-RI-Tkr" id="gjN-dw-MNo"/>
+                        <outlet property="confirmar_button" destination="yuT-RI-Tkr" id="4XO-5e-pmr"/>
                         <outlet property="nomeFilme" destination="rO7-0E-WjG" id="JaI-kh-5fo"/>
                         <outlet property="textFieldAgendarAno" destination="a8l-7M-clR" id="3g8-2S-hQk"/>
                         <outlet property="textFieldAgendarDia" destination="fhT-f7-DoC" id="iem-nB-tKM"/>
@@ -746,8 +744,6 @@
                         <outlet property="textFieldNotificacaoDia" destination="YbS-dZ-ddZ" id="ZBQ-jJ-PTe"/>
                         <outlet property="textFieldNotificacaoMes" destination="uRt-xt-viV" id="xNu-IE-KUf"/>
                         <outlet property="textFieldPush" destination="PIM-n7-ePV" id="Xht-Ad-RSH"/>
-                        <outlet property="textFieldVezesDia" destination="yqz-mU-CTU" id="eIF-M3-pab"/>
-                        <outlet property="textFieldVezesSemana" destination="VdI-SA-LNQ" id="Q0l-yf-OdU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d5o-I1-6oh" userLabel="First Responder" sceneMemberID="firstResponder"/>

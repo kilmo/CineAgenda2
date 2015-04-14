@@ -7,6 +7,7 @@
 //
 #import "FilmeStore.h"
 #import "AgendaController.h"
+#import "FilmeAgendaController.h"
 
 @interface AgendaController()
 @property ( nonatomic, strong ) IBOutlet UITableView  *tabelaAgenda;
@@ -63,9 +64,18 @@
     UIStoryboard * tela = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     
     //faz com que ao clicar na celula ela te redirecione para uma nova view
-    UIViewController * tabelaDeFilmesAgenda = [tela instantiateViewControllerWithIdentifier:@"FilmeAgendaController"];
+    FilmeAgendaController * tabelaDeFilmesAgenda = [tela instantiateViewControllerWithIdentifier:@"FilmeAgendaController"];
+    NSString *stringNome = [[[FilmeStore sharedStore] arrayNomeFilme] objectAtIndex:indexPath.row];
     
-    [self presentViewController:tabelaDeFilmesAgenda animated:NO completion:nil];
+    FilmeStore *store = [FilmeStore sharedStore];
+    
+    if(![store gambiarra]){
+        [store setGambiarra:[NSMutableArray array]];
+    }
+    [[store gambiarra]removeAllObjects];
+    [[store gambiarra] addObject:stringNome];
+    
+    [self presentViewController:tabelaDeFilmesAgenda animated:YES completion:nil];
     
 }
 
