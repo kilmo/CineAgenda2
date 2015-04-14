@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hUL-ba-lwN">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -40,6 +40,154 @@
         </mutableArray>
     </customFonts>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="4Tc-Ox-8xM">
+            <objects>
+                <navigationController id="b1v-UH-Ehr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NDs-Iy-8zm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5fv-yV-2Rf" kind="relationship" relationship="rootViewController" id="qK6-VI-weQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OCN-pt-HVg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="814.5" y="894"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lBp-IG-T0X">
+            <objects>
+                <viewController id="5fv-yV-2Rf" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m64-QB-0Rw"/>
+                        <viewControllerLayoutGuide type="bottom" id="jfD-wo-HKO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yR4-eM-GlB">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ard-bp-OoY">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="168" y="414" width="42" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Ard-bp-OoY"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Ard-bp-OoY"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="pXI-Jx-afl">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="qFt-Cf-ZGu"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="barButtom" destination="qFt-Cf-ZGu" id="6mn-mo-6A0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TwE-2n-yYv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1806" y="774"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EC2-Ux-sCm">
+            <objects>
+                <viewController id="QGv-li-6qh" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E21-gr-0HQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="O0U-K8-h8X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RwA-48-5O1">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LE6-Fr-hoF">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="171" y="249" width="42" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="LE6-Fr-hoF"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="LE6-Fr-hoF"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZD3-Vr-f5F">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="IZ7-dD-VZJ"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="barButtom" destination="IZ7-dD-VZJ" id="d2M-GN-ktB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nLV-w4-3QD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1806" y="20"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dNf-kj-KDv">
+            <objects>
+                <viewController id="eR8-6g-rpi" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xRL-fW-uWV"/>
+                        <viewControllerLayoutGuide type="bottom" id="SoN-Su-heV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WqA-mj-7wY">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2A-h4-lah">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="179" y="143" width="42" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Q2A-h4-lah"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Q2A-h4-lah"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="gBt-f0-7Fv">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="gep-cC-Yat"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="barButtom" destination="gep-cC-Yat" id="HpX-KL-2yf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ve-rW-Igu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1806" y="-676"/>
+        </scene>
         <!--Tela Login-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -64,6 +212,9 @@
                                     <constraint firstAttribute="height" constant="224" id="6Hs-lA-ANO"/>
                                     <constraint firstAttribute="width" constant="261" id="qtc-2R-xh2"/>
                                 </constraints>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="58" y="39" width="261" height="224"/>
+                                </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6D-0a-Asf">
                                 <rect key="frame" x="96" y="387" width="184" height="50"/>
@@ -87,6 +238,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="71" y="286" width="235" height="30"/>
+                                </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="c5A-IN-Ha5">
                                 <rect key="frame" x="70" y="337" width="235" height="30"/>
@@ -96,6 +250,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="71" y="337" width="235" height="30"/>
+                                </variation>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ae-HL-euK">
                                 <rect key="frame" x="111" y="442" width="152" height="30"/>
@@ -139,7 +296,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="234.5" y="890.5"/>
+            <point key="canvasLocation" x="2810.5" y="698.5"/>
         </scene>
         <!--Filme-->
         <scene sceneID="RO9-V3-Sm4">
@@ -258,7 +415,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wPh-NH-BVd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1489.5" y="1288.5"/>
+            <point key="canvasLocation" x="4065.5" y="1096.5"/>
         </scene>
         <!--Cadastro Usuario-->
         <scene sceneID="q9J-Td-cVA">
@@ -282,6 +439,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="19"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="71" y="130" width="235" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="exitSobrenome:" destination="YC1-a6-Uad" eventType="editingDidEndOnExit" id="nfy-t2-jeK"/>
                                 </connections>
@@ -296,6 +456,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="19"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="71" y="170" width="235" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="exitEmail:" destination="YC1-a6-Uad" eventType="editingDidEndOnExit" id="o7v-Fu-DgC"/>
                                 </connections>
@@ -310,6 +473,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="19"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="71" y="210" width="235" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="exitConEmail:" destination="YC1-a6-Uad" eventType="editingDidEndOnExit" id="nxk-QU-M7t"/>
                                 </connections>
@@ -336,6 +502,9 @@
                                         <exclude reference="zdf-cg-6rQ"/>
                                     </mask>
                                 </variation>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="71" y="250" width="235" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="exitSenha:" destination="YC1-a6-Uad" eventType="editingDidEndOnExit" id="t34-Ji-8Zz"/>
                                 </connections>
@@ -349,6 +518,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.99215692281723022" green="0.9960784912109375" blue="0.9960784912109375" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="55" y="340" width="267" height="28"/>
+                                </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmação Senha" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="NQc-xh-e8N">
                                 <rect key="frame" x="70" y="290" width="235" height="30"/>
@@ -360,6 +532,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="71" y="290" width="235" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="exitConSenha:" destination="YC1-a6-Uad" eventType="editingDidEndOnExit" id="kQv-Zs-d55"/>
                                 </connections>
@@ -390,6 +565,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.99215692281723022" green="0.9960784912109375" blue="0.9960784912109375" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="157" y="418" width="63" height="28"/>
+                                </variation>
                                 <connections>
                                     <segue destination="vXZ-lx-hvc" kind="show" id="bij-EY-am0"/>
                                 </connections>
@@ -404,6 +582,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="19"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="71" y="90" width="235" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="exitNome:" destination="YC1-a6-Uad" eventType="editingDidEndOnExit" id="qzs-X0-SFa"/>
                                 </connections>
@@ -466,7 +647,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9lx-Z5-oe1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="862.5" y="226.5"/>
+            <point key="canvasLocation" x="3438.5" y="34.5"/>
         </scene>
         <!--Tabela Filme Controller-->
         <scene sceneID="vXk-ea-eas">
@@ -570,7 +751,111 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="86J-cN-yEo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="762.5" y="1351.5"/>
+            <point key="canvasLocation" x="3338.5" y="1159.5"/>
+        </scene>
+        <!--Reveal View Controller-->
+        <scene sceneID="iuz-4o-ZrP">
+            <objects>
+                <viewController id="hUL-ba-lwN" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f7v-GR-NSe"/>
+                        <viewControllerLayoutGuide type="bottom" id="rOc-xU-iKj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sZ4-vr-gby">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="NAR-9R-HFa" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegue" id="I0V-p7-d7K"/>
+                        <segue destination="b1v-UH-Ehr" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegue" id="RKQ-Kl-GGI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XvT-8p-X8C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-66" y="464"/>
+        </scene>
+        <!--Navigation View Controller-->
+        <scene sceneID="srp-aZ-8L0">
+            <objects>
+                <tableViewController id="NAR-9R-HFa" customClass="NavigationViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="0kA-U3-0xe">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="first" textLabel="rWK-3G-DhN" style="IBUITableViewCellStyleDefault" id="gw4-s0-4Cc">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gw4-s0-4Cc" id="eqX-n1-51I">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Hello world" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rWK-3G-DhN">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact">
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            </variation>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="5fv-yV-2Rf" kind="custom" customClass="SWRevealViewControllerSegue" id="4bx-Ja-SmS"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="second" textLabel="vnx-5B-Q2D" style="IBUITableViewCellStyleDefault" id="FqK-d9-fj6">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FqK-d9-fj6" id="k34-Yx-BEu">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="This is Jared" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vnx-5B-Q2D">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact">
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            </variation>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="QGv-li-6qh" kind="custom" customClass="SWRevealViewControllerSegue" id="9o4-cE-cBB"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="third" textLabel="h5c-N8-KZf" style="IBUITableViewCellStyleDefault" id="4fz-T4-75A">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4fz-T4-75A" id="zJU-0L-pMv">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Map" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h5c-N8-KZf">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact">
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            </variation>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="eR8-6g-rpi" kind="custom" customClass="SWRevealViewControllerSegue" id="8VI-57-2GT"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="NAR-9R-HFa" id="fzK-q7-rN6"/>
+                            <outlet property="delegate" destination="NAR-9R-HFa" id="0eK-I9-1M2"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xBR-uK-eLL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="814.5" y="106"/>
         </scene>
         <!--FilmeAgendar-->
         <scene sceneID="Vfn-sw-3oO">
@@ -748,7 +1033,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d5o-I1-6oh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.5" y="83.5"/>
+            <point key="canvasLocation" x="2712.5" y="-108.5"/>
         </scene>
         <!--Agenda-->
         <scene sceneID="tNI-LX-FlQ">
@@ -919,7 +1204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fbc-wi-bY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1408.5" y="323.5"/>
+            <point key="canvasLocation" x="3984.5" y="131.5"/>
         </scene>
     </scenes>
     <resources>
@@ -929,6 +1214,7 @@
         <image name="iTunesArtwork.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5Ve-3B-wFo"/>
+        <segue reference="4bx-Ja-SmS"/>
+        <segue reference="2nX-49-3Xh"/>
     </inferredMetricsTieBreakers>
 </document>
