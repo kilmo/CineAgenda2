@@ -70,6 +70,14 @@
 		1BD31AA91AD55F2D00050B6C /* FilmeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BD31AA81AD55F2D00050B6C /* FilmeController.m */; };
 		A32E93181AD758520081B228 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A32E93171AD758520081B228 /* iTunesArtwork@2x.png */; };
 		A3C59B011AD85F5000951997 /* AgendaController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C59B001AD85F5000951997 /* AgendaController.m */; };
+		C3ABE9F61ADD920D00AB8E3C /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ABE9F51ADD920D00AB8E3C /* SWRevealViewController.m */; };
+		C3ABE9F71ADD920D00AB8E3C /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ABE9F51ADD920D00AB8E3C /* SWRevealViewController.m */; };
+		C3ABE9FF1ADD978300AB8E3C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ABE9FE1ADD978300AB8E3C /* ViewController.m */; };
+		C3ABEA001ADD978300AB8E3C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ABE9FE1ADD978300AB8E3C /* ViewController.m */; };
+		C3ABEA031ADD9B2000AB8E3C /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ABEA021ADD9B2000AB8E3C /* NavigationViewController.m */; };
+		C3ABEA041ADD9B2000AB8E3C /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ABEA021ADD9B2000AB8E3C /* NavigationViewController.m */; };
+		C3ABEA0B1ADDB80C00AB8E3C /* TesteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ABEA0A1ADDB80C00AB8E3C /* TesteViewController.m */; };
+		C3ABEA0C1ADDB80C00AB8E3C /* TesteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ABEA0A1ADDB80C00AB8E3C /* TesteViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +168,14 @@
 		A32E93171AD758520081B228 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		A3C59AFF1AD85F5000951997 /* AgendaController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgendaController.h; sourceTree = "<group>"; };
 		A3C59B001AD85F5000951997 /* AgendaController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgendaController.m; sourceTree = "<group>"; };
+		C3ABE9F41ADD920D00AB8E3C /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		C3ABE9F51ADD920D00AB8E3C /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		C3ABE9FD1ADD978300AB8E3C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C3ABE9FE1ADD978300AB8E3C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C3ABEA011ADD9B2000AB8E3C /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
+		C3ABEA021ADD9B2000AB8E3C /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+		C3ABEA091ADDB80C00AB8E3C /* TesteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TesteViewController.h; sourceTree = "<group>"; };
+		C3ABEA0A1ADDB80C00AB8E3C /* TesteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TesteViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +295,11 @@
 		1BD0BE971AD2F57500595BBE /* GetMovie */ = {
 			isa = PBXGroup;
 			children = (
+				C3ABE9FD1ADD978300AB8E3C /* ViewController.h */,
+				C3ABE9FE1ADD978300AB8E3C /* ViewController.m */,
+				C3ABEA011ADD9B2000AB8E3C /* NavigationViewController.h */,
+				C3ABEA021ADD9B2000AB8E3C /* NavigationViewController.m */,
+				C3ABEA0D1ADDB91000AB8E3C /* TesteViewController */,
 				1BD0BE9C1AD2F57500595BBE /* AppDelegate.h */,
 				1BD0BE9D1AD2F57500595BBE /* AppDelegate.m */,
 				1BD29F351AD6BEF8003D54EA /* Main.storyboard */,
@@ -303,6 +324,7 @@
 		1BD0BE981AD2F57500595BBE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C3ABE9F31ADD920D00AB8E3C /* SlideOutMenuFiles */,
 				1BD29F301AD6B621003D54EA /* MYRIADPRO-REGULAR.OTF */,
 				1BD29F2F1AD6B621003D54EA /* MYRIADPRO-BOLD.OTF */,
 				1B89B7461AD2F6D100BC855A /* GetMovie-Bridging-Header.h */,
@@ -390,6 +412,25 @@
 				1BD1B9CF1AD70F3800D903D7 /* FilmeAgendaController.m */,
 			);
 			name = "Filme Agenda Controller";
+			sourceTree = "<group>";
+		};
+		C3ABE9F31ADD920D00AB8E3C /* SlideOutMenuFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C3ABE9F41ADD920D00AB8E3C /* SWRevealViewController.h */,
+				C3ABE9F51ADD920D00AB8E3C /* SWRevealViewController.m */,
+			);
+			name = SlideOutMenuFiles;
+			path = GetMovieTests/SlideOutMenuFiles;
+			sourceTree = SOURCE_ROOT;
+		};
+		C3ABEA0D1ADDB91000AB8E3C /* TesteViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C3ABEA091ADDB80C00AB8E3C /* TesteViewController.h */,
+				C3ABEA0A1ADDB80C00AB8E3C /* TesteViewController.m */,
+			);
+			name = TesteViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -530,8 +571,12 @@
 				1BD0BE9E1AD2F57500595BBE /* AppDelegate.m in Sources */,
 				1B89B7971AD3035900BC855A /* cadastroUsuario.m in Sources */,
 				1BCCB4BD1AD4418500B70847 /* TabelaFilmeController.m in Sources */,
+				C3ABE9FF1ADD978300AB8E3C /* ViewController.m in Sources */,
+				C3ABEA031ADD9B2000AB8E3C /* NavigationViewController.m in Sources */,
 				1BD1B9D01AD70F3800D903D7 /* FilmeAgendaController.m in Sources */,
 				1BD0BE9B1AD2F57500595BBE /* main.m in Sources */,
+				C3ABEA0B1ADDB80C00AB8E3C /* TesteViewController.m in Sources */,
+				C3ABE9F61ADD920D00AB8E3C /* SWRevealViewController.m in Sources */,
 				1BD31AA91AD55F2D00050B6C /* FilmeController.m in Sources */,
 				1BCCB4C01AD468BC00B70847 /* Filme.m in Sources */,
 			);
@@ -541,7 +586,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3ABEA041ADD9B2000AB8E3C /* NavigationViewController.m in Sources */,
+				C3ABEA001ADD978300AB8E3C /* ViewController.m in Sources */,
+				C3ABEA0C1ADDB80C00AB8E3C /* TesteViewController.m in Sources */,
 				1BD0BEB51AD2F57500595BBE /* GetMovieTests.m in Sources */,
+				C3ABE9F71ADD920D00AB8E3C /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
