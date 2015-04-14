@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>F7F12D99-B469-4D3D-94C9-953AC04FCC8D</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>GetMovie</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>10B5D901B2DB9502CD302088353473BEFC9D801C</key>
 		<string>https://github.com/kilmo/CineAgenda2.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>GetMovie.xcodeproj/project.xcworkspace</string>
+	<string>GetMovie.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>10B5D901B2DB9502CD302088353473BEFC9D801C</key>

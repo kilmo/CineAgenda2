@@ -25,12 +25,12 @@
     
 }
 
-
-- (IBAction)cadastrarUsuarioButton:(id)sender {
+-(IBAction)cadastrarUsuarioButton:(id)sender {
     [self cadastrarUsuario:sender];
 }
 
 //----------------------------------------------------
+
 
 - (void) setBackGroundColor {
     UIColor *color = [[UIColor alloc]initWithRed:206.0/255.0 green:32.0/255.0 blue:39.0/255.0 alpha:1.0];
@@ -46,8 +46,8 @@
     }
 }
 
-
 - (void) cadastrarUsuario:(id)sender {
+
     _status = 0;
     
     if([_nome.text isEqualToString:@""] || [_sobrenome.text isEqualToString:@""] || [_email.text isEqualToString:@""] || [_senha.text isEqualToString:@""]){
