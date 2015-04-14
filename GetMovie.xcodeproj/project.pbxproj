@@ -76,6 +76,8 @@
 		C3ABEA001ADD978300AB8E3C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ABE9FE1ADD978300AB8E3C /* ViewController.m */; };
 		C3ABEA031ADD9B2000AB8E3C /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ABEA021ADD9B2000AB8E3C /* NavigationViewController.m */; };
 		C3ABEA041ADD9B2000AB8E3C /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ABEA021ADD9B2000AB8E3C /* NavigationViewController.m */; };
+		C3ABEA0B1ADDB80C00AB8E3C /* TesteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ABEA0A1ADDB80C00AB8E3C /* TesteViewController.m */; };
+		C3ABEA0C1ADDB80C00AB8E3C /* TesteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ABEA0A1ADDB80C00AB8E3C /* TesteViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,6 +174,8 @@
 		C3ABE9FE1ADD978300AB8E3C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C3ABEA011ADD9B2000AB8E3C /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
 		C3ABEA021ADD9B2000AB8E3C /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+		C3ABEA091ADDB80C00AB8E3C /* TesteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TesteViewController.h; sourceTree = "<group>"; };
+		C3ABEA0A1ADDB80C00AB8E3C /* TesteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TesteViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,6 +299,7 @@
 				C3ABE9FE1ADD978300AB8E3C /* ViewController.m */,
 				C3ABEA011ADD9B2000AB8E3C /* NavigationViewController.h */,
 				C3ABEA021ADD9B2000AB8E3C /* NavigationViewController.m */,
+				C3ABEA0D1ADDB91000AB8E3C /* TesteViewController */,
 				1BD0BE9C1AD2F57500595BBE /* AppDelegate.h */,
 				1BD0BE9D1AD2F57500595BBE /* AppDelegate.m */,
 				1BD29F351AD6BEF8003D54EA /* Main.storyboard */,
@@ -418,6 +423,15 @@
 			name = SlideOutMenuFiles;
 			path = GetMovieTests/SlideOutMenuFiles;
 			sourceTree = SOURCE_ROOT;
+		};
+		C3ABEA0D1ADDB91000AB8E3C /* TesteViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C3ABEA091ADDB80C00AB8E3C /* TesteViewController.h */,
+				C3ABEA0A1ADDB80C00AB8E3C /* TesteViewController.m */,
+			);
+			name = TesteViewController;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -561,6 +575,7 @@
 				C3ABEA031ADD9B2000AB8E3C /* NavigationViewController.m in Sources */,
 				1BD1B9D01AD70F3800D903D7 /* FilmeAgendaController.m in Sources */,
 				1BD0BE9B1AD2F57500595BBE /* main.m in Sources */,
+				C3ABEA0B1ADDB80C00AB8E3C /* TesteViewController.m in Sources */,
 				C3ABE9F61ADD920D00AB8E3C /* SWRevealViewController.m in Sources */,
 				1BD31AA91AD55F2D00050B6C /* FilmeController.m in Sources */,
 				1BCCB4C01AD468BC00B70847 /* Filme.m in Sources */,
@@ -573,6 +588,7 @@
 			files = (
 				C3ABEA041ADD9B2000AB8E3C /* NavigationViewController.m in Sources */,
 				C3ABEA001ADD978300AB8E3C /* ViewController.m in Sources */,
+				C3ABEA0C1ADDB80C00AB8E3C /* TesteViewController.m in Sources */,
 				1BD0BEB51AD2F57500595BBE /* GetMovieTests.m in Sources */,
 				C3ABE9F71ADD920D00AB8E3C /* SWRevealViewController.m in Sources */,
 			);

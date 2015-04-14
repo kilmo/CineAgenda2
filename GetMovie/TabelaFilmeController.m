@@ -12,7 +12,7 @@
 #import <Parse/Parse.h>
 #import "FilmeController.h"
 #import "AgendaController.h"
-
+#import "SWRevealViewController.h"
 
 
 @interface TabelaFilmeController()

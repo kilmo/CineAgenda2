@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    menu = @[@"first", @"second", @"third"];
+    menu = @[@"first", @"second", @"third", @"teste"];
 }
 
 - (void)didReceiveMemoryWarning {
