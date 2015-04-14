@@ -17,11 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *senha;
 @property (weak, nonatomic) IBOutlet UITextField *conSenha;
 @property (weak, nonatomic) IBOutlet UILabel *textoEntrada;
-<<<<<<< HEAD
-@property (weak, nonatomic) IBOutlet UIButton *cadastrarUsuario;
-=======
 @property (weak, nonatomic) IBOutlet UIButton *cadastrarUsuarioButton;
->>>>>>> ErikaBranch
 @property (nonatomic) NSInteger status;
 
 @end
