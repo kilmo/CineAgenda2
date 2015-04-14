@@ -7,6 +7,7 @@
 //
 #import "FilmeStore.h"
 #import "AgendaController.h"
+#import "FilmeAgendaController.h"
 
 @interface AgendaController()
 @property ( nonatomic, strong ) IBOutlet UITableView  *tabelaAgenda;
@@ -63,9 +64,18 @@
     UIStoryboard * tela = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     
     //faz com que ao clicar na celula ela te redirecione para uma nova view
-    UIViewController * tabelaDeFilmesAgenda = [tela instantiateViewControllerWithIdentifier:@"FilmeAgendaController"];
+    FilmeAgendaController * tabelaDeFilmesAgenda = [tela instantiateViewControllerWithIdentifier:@"FilmeAgendaController"];
+    NSString *stringNome = [[[FilmeStore sharedStore] arrayNomeFilme] objectAtIndex:indexPath.row];
     
-    [self presentViewController:tabelaDeFilmesAgenda animated:NO completion:nil];
+    FilmeStore *store = [FilmeStore sharedStore];
+    
+    if(![store gambiarra]){
+        [store setGambiarra:[NSMutableArray array]];
+    }
+    [[store gambiarra]removeAllObjects];
+    [[store gambiarra] addObject:stringNome];
+    
+    [self presentViewController:tabelaDeFilmesAgenda animated:YES completion:nil];
     
 }
 
@@ -99,72 +109,13 @@
     }
     cell.backgroundView = myView;
     
-    //Adiciona itens nas células da tabela cada label é uma linha nova
-    
-    // Label Imagem do Filme
-    //    for(NSString * str in _cartazEstreia){
-    //        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(15, 15, 90, 120)];
-    //        [imageView setImage:[UIImage imageNamed:str]];
-    //        [cell addSubview:imageView];
-    //    }
-    
-//    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(15, 15, 90, 120)];
-//    [imageView setImage:[UIImage imageNamed:@"Layout Feed 01 Poster size.png"]];
-//    [cell addSubview:imageView];
-    
-    
-    
-    // Botão Célula - Adicionar Filme
-    /*UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-     [button addTarget:self action:@selector(aparecerView:) forControlEvents:UIControlEventTouchUpInside];
-     [button setBackgroundImage:[UIImage imageNamed:@"Layout Feed 01 Agenda.png"] forState: UIControlStateNormal];
-     [button sizeToFit];
-     button.frame = CGRectMake(button.frame.origin.x,
-     button.frame.origin.y, 85, 30);
-     // Set a new (x,y) point for the button's center
-     button.center = CGPointMake(335, 135);
-     
-     [cell addSubview:button]; */
-    
-    
     // Label Nome do Filme
     UILabel *labelNome = [[UILabel alloc] initWithFrame:CGRectMake(130, 20, 240, 20)];
     UIFont *font = labelNome.font;
     labelNome.font = [font fontWithSize:14];
     [labelNome setText:[[[FilmeStore sharedStore] arrayFilmesUsuario] objectAtIndex:indexPath.row]];
     [cell addSubview:labelNome];
-//    
-//    // Label Diretor do Filme
-//     UILabel *labelDiretor = [[UILabel alloc] initWithFrame:CGRectMake(130, 40, 250, 20)];
-//     font = labelDiretor.font;
-//     labelDiretor.font = [font fontWithSize:14];
-//     [labelDiretor setText:[[[FilmeStore sharedStore] arrayDiretorFilme] objectAtIndex:indexPath.row]];
-//     [cell addSubview:labelDiretor];
-//     
-//     // Label Generos do Filme
-//     UILabel *labelGeneros = [[UILabel alloc] initWithFrame:CGRectMake(130, 60, 250, 20)];
-//     font = labelGeneros.font;
-//     labelGeneros.font = [font fontWithSize:14];
-//     [labelGeneros setText:[[[FilmeStore sharedStore] arrayGenerosFilme] objectAtIndex:indexPath.row]];
-//     [cell addSubview:labelGeneros];
-//     
-//     // Label Data do Filme
-//     UILabel *labelData = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 60, 40)];
-//     font = labelData.font;
-//     labelData.font = [font fontWithSize:16];
-//     [labelData setText:[[[FilmeStore sharedStore] arrayDataFilme] objectAtIndex:indexPath.row]];
-//     [cell addSubview:labelData];
-//    
-//    
-//    // Label Data Estréia do Filme
-//    UILabel *labelEstreia = [[UILabel alloc] initWithFrame:CGRectMake(130, 90, 150, 20)];
-//    font = labelEstreia.font;
-//    labelEstreia.font = [font fontWithSize:16];
-//    [labelEstreia setText:[[[FilmeStore sharedStore] arrayDataFilme] objectAtIndex:indexPath.row]];
-//    [cell addSubview:labelData];
-//    //cell.imageView.image = [UIImage imageNamed:@"image.png"];
-//    
-//    
+
     return cell;
 }
 

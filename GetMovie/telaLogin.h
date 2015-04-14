@@ -11,7 +11,6 @@
 @interface telaLogin : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *labelEmail;
-
 @property (weak, nonatomic) IBOutlet UITextField *labelSenha;
 @property (weak, nonatomic) IBOutlet UILabel *textLabel;
 

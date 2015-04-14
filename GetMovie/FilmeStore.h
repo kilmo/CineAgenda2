@@ -10,7 +10,6 @@
 #import "Filme.h"
 @interface FilmeStore : NSObject
 
-//@property (nonatomic, readonly) NSArray *arrayTodosFilmes;
 @property (nonatomic, strong) NSArray *arrayNomeFilme;
 @property (nonatomic, strong) NSArray *arrayDiretorFilme;
 @property (nonatomic, strong) NSArray *arrayDataFilme;
@@ -23,8 +22,6 @@
 
 + (instancetype)sharedStore;//permite todas as classes ter acesso somente a uma instância dele, evita incoerências na informacao
 
-//- (Filme *)criarFilme:(NSArray*) filmeCompleto;
-//- (NSArray *)arrayNomeFilme;
 - (void)loadFilme;
 - (instancetype)init;
 - (instancetype)initPrivate;

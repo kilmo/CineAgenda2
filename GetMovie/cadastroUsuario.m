@@ -16,20 +16,27 @@
 
 @implementation cadastroUsuario
 
-NSInteger status;
 
 
 - (void)viewDidLoad {
     
-    //Setting BackGround Color
-    UIColor *color = [[UIColor alloc]initWithRed:206.0/255.0 green:32.0/255.0 blue:39.0/255.0 alpha:1.0];
+    [self setBackGroundColor];
     
-    self.view.backgroundColor = color;
     
 }
 
-// Sair do Teclado ////
 
+- (IBAction)cadastrarUsuarioButton:(id)sender {
+    [self cadastrarUsuario:sender];
+}
+
+//----------------------------------------------------
+
+- (void) setBackGroundColor {
+    UIColor *color = [[UIColor alloc]initWithRed:206.0/255.0 green:32.0/255.0 blue:39.0/255.0 alpha:1.0];
+    
+    self.view.backgroundColor = color;
+}
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     for (UIView * txt in self.view.subviews){
@@ -39,40 +46,36 @@ NSInteger status;
     }
 }
 
-// Fim Sair do Teclado ///
 
-- (IBAction)cadastrarUsuario:(id)sender {
-    status = 0;
+- (void) cadastrarUsuario:(id)sender {
+    _status = 0;
     
     if([_nome.text isEqualToString:@""] || [_sobrenome.text isEqualToString:@""] || [_email.text isEqualToString:@""] || [_senha.text isEqualToString:@""]){
         
         _textoEntrada.text = @"Preencha todos os campos.";
-        status = 1;
+        _status = 1;
     }
-    
     
     if(![_email.text isEqualToString:_conEmail.text ])
     {
         _textoEntrada.text = @"E-mails não correspondem!";
-        status = 1;
+        _status = 1;
     }
     
     else if(![_senha.text isEqualToString:_conSenha.text])
     {
         _textoEntrada.text = @"Senhas não correspondem!";
-        status = 1;
+        _status = 1;
     }
     else {
-        
-        
-        PFQuery *query = [PFQuery queryWithClassName:@"usuario"]; //1
-        [query  whereKey:@"email" equalTo:_email.text];//2
-        [query findObjectsInBackgroundWithBlock:^(NSArray *usuario, NSError *error) {//4
+        PFQuery *query = [PFQuery queryWithClassName:@"usuario"];
+        [query  whereKey:@"email" equalTo:_email.text];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *usuario, NSError *error) {
             
             if(usuario != nil || usuario.count != 0)
             {
                 _textoEntrada.text = @"Usuário já cadastrado.";
-                status = 1;
+                _status = 1;
                 
             }
             
@@ -82,7 +85,7 @@ NSInteger status;
                 
                 if (![user[@"email"] isEqual:@""] || usuario != nil ) {
                     _textoEntrada.text = @"Usuário já cadastrado.";
-                    status = 1;
+                    _status = 1;
                 }
                 
             }
@@ -93,18 +96,14 @@ NSInteger status;
             }
             
             
-            if(status == 0) {
+            
+            if(_status == 0) {
                 PFObject *usuario = [PFObject objectWithClassName:@"usuario"];
-                //PFObject *usuarioFilmes = [PFObject objectWithClassName:@"usuarioFilmes"];
-                // Salva os dados do usuário
                 usuario[@"nome"] = _nome.text;
                 usuario[@"sobrenome"] = _sobrenome.text;
                 usuario[@"email"] = _email.text;
                 usuario[@"senha"] = _senha.text;
-                //usuarioFilmes[@"email"] = _email.text;
                 
-                //Enviar pro DB
-                //[usuario saveInBackground];
                 [usuario saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                     
                     if (succeeded){
@@ -121,10 +120,9 @@ NSInteger status;
                     }
                     
                 }];
-            }// Fim da verifacão
+            }
         }];
     }
-    
 }
 
 @end

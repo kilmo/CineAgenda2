@@ -10,4 +10,8 @@
 
 @interface FilmeAgendaController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *confirmar_button;
+
+-(IBAction)confirmar_button:(id)sender;
+-(void)adiciona_reminder;
 @end
