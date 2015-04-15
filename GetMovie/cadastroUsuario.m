@@ -26,13 +26,21 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 - (IBAction)cadastrarUsuarioButton:(id)sender {
+=======
+-(IBAction)cadastrarUsuarioButton:(id)sender {
+>>>>>>> ErikaBranch
     [self cadastrarUsuario:sender];
 }
 
 //----------------------------------------------------
+
+<<<<<<< HEAD
+>>>>>>> ErikaBranch
+=======
 
 >>>>>>> ErikaBranch
 - (void) setBackGroundColor {
@@ -49,6 +57,7 @@
     }
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 - (IBAction)cadastrarUsuario:(id)sender {
@@ -58,6 +67,10 @@
 - (void) cadastrarUsuario {
 =======
 - (void) cadastrarUsuario:(id)sender {
+>>>>>>> ErikaBranch
+=======
+- (void) cadastrarUsuario:(id)sender {
+
 >>>>>>> ErikaBranch
     _status = 0;
     
