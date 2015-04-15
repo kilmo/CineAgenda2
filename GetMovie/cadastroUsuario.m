@@ -31,7 +31,6 @@
 
 //----------------------------------------------------
 
-
 - (void) setBackGroundColor {
     UIColor *color = [[UIColor alloc]initWithRed:206.0/255.0 green:32.0/255.0 blue:39.0/255.0 alpha:1.0];
     
