@@ -23,7 +23,9 @@
     
     [self setarCores];
     [self buscarDadosFilme];
-    
+   // _scrolldown.subviews.accessibilityFrame.size.width = _scrolldown.contentSize.width;
+    [_scrolldown setContentOffset: CGPointMake(0, self.scrolldown.contentOffset.y)];
+    _scrolldown.directionalLockEnabled = YES;
 }
 
 //----------------------------------------------
@@ -51,6 +53,24 @@
             NSURL *url = [NSURL URLWithString:foto.url];
             NSData *data = [[NSData alloc] initWithContentsOfURL:url];
             _fotoFilme.image = [UIImage imageWithData: data];
+            
+            _lancamento.numberOfLines = 0;
+            [_lancamento sizeToFit];
+            _sinopse.numberOfLines = 0;
+            [_sinopse sizeToFit];
+            _elenco.numberOfLines = 0;
+            [_elenco sizeToFit];
+            _diretor.numberOfLines = 0;
+            [_diretor sizeToFit];
+            _soundtrack.numberOfLines = 0;
+            [_soundtrack sizeToFit];
+            _genero.numberOfLines = 0;
+            [_genero sizeToFit];
+            _classificacao.numberOfLines = 0;
+            [_classificacao sizeToFit];
+            _duracao.numberOfLines = 0;
+            [_duracao sizeToFit];
+            
             
         }
         else{

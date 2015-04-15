@@ -20,5 +20,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *genero;
 @property (weak, nonatomic) IBOutlet UILabel *classificacao;
 @property (weak, nonatomic) IBOutlet UILabel *duracao;
+@property (nonatomic) IBOutlet UIScrollView *scrolldown;
 
 @end
