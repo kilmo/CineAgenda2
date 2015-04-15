@@ -18,6 +18,13 @@
 @interface TabelaFilmeController()
 
 @property ( nonatomic, strong ) IBOutlet UITableView  *tabelaEstreia;
+@property (nonatomic, strong) NSString *nome;
+@property (nonatomic, strong) NSString *diretor;
+@property (nonatomic, strong) NSString *genero;
+@property (nonatomic, strong) NSString *data;
+@property (nonatomic, strong) UILabel *labelNome;
+@property (nonatomic, strong) UILabel *labelData;
+@property (nonatomic, strong) UIView *myView;
 
 @end
 
@@ -25,12 +32,13 @@
 
 - (void)viewDidLoad
 
-    {
+{
     [super viewDidLoad];
-      
+    
     self.tabelaEstreia.dataSource = self;
     self.tabelaEstreia.delegate = self;
- 
+    
+    
     
 }
 
@@ -49,13 +57,13 @@
 {
     //permite que o tableView saiba o numero completo de itens das celulas
     
-        return [[[FilmeStore sharedStore] arrayNomeFilme]count];
+    return [[[FilmeStore sharedStore] arrayNomeFilme]count];
 }
 
 //------------------------------------------------
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-
+    
     
     UIStoryboard * tela = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     
@@ -84,7 +92,10 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:
 
-    (NSIndexPath *)indexPath{
+(NSIndexPath *)indexPath{
+    
+    UIView *myView = [[UIView alloc] init];
+
     static NSString *simpleTableIdentifier = @"Filmes";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
@@ -94,8 +105,55 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
         
     }
-    //configura as cores da celula
-    UIView *myView = [[UIView alloc] init];
+        
+    [self setCellColor:indexPath SecondObject:myView ThirdObject:cell];
+    
+    [self getFotoFilme:indexPath SecondObject:cell];
+    
+    [self setButtonCell:indexPath secondObject:cell];
+
+    [self getNomeFilme:indexPath SecondObject:cell];
+    
+    [self getDiretorFilme:indexPath secondObject:cell];
+    
+    [self getGeneroFilme:indexPath secondObjects:cell];
+
+    [self getEstreiaFilme:indexPath SecondObject:cell];
+    
+    return cell;
+}
+
+//----------------------------------------------------------------------
+
+-(void) setButtonCell : (NSIndexPath*) indexPath secondObject: (UITableViewCell*) cell {
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    [button addTarget:self action:@selector(aparecerView:) forControlEvents:UIControlEventTouchUpInside];
+    [button setBackgroundImage:[UIImage imageNamed:@"Layout Feed 01 Agenda.png"] forState: UIControlStateNormal];
+    [button sizeToFit];
+    button.frame = CGRectMake(button.frame.origin.x, button.frame.origin.y, 100, 31);
+    button.center = CGPointMake(335, 135);
+    
+    [cell addSubview:button];
+}
+
+//----------------------------------------------------------------------
+
+-(void) getFotoFilme : (NSIndexPath*) indexPath SecondObject: (UITableViewCell*) cell{
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 110, 150)];
+    
+    NSURL *url = [NSURL URLWithString:[[[FilmeStore sharedStore] arrayFotoFilme] objectAtIndex:indexPath.row]];
+    NSData *data = [[NSData alloc] initWithContentsOfURL:url];
+    imageView.image = [UIImage imageWithData: data];
+    [cell addSubview:imageView];
+}
+
+//----------------------------------------------------------------------
+
+-(void) setCellColor: (NSIndexPath*) indexPath SecondObject: (UIView*) myView ThirdObject: (UITableViewCell*) cell {
+    
+    //UIView *myView = [[UIView alloc] init];
     if (indexPath.row % 2) {
         myView.backgroundColor = [UIColor whiteColor];
     } else {
@@ -105,72 +163,79 @@
     
     cell.textLabel.text = [[[FilmeStore sharedStore] arrayNomeFilme] objectAtIndex:indexPath.row];
     cell.textLabel.textColor = [UIColor clearColor];
-    //Adiciona itens nas células da tabela cada label é uma linha nova
+}
+
+//----------------------------------------------------------------------
+
+- (void) getNomeFilme: (NSIndexPath*)indexPath SecondObject: (UITableViewCell*) cell {
+
+    UILabel *labelNome = [[UILabel alloc] initWithFrame:CGRectMake(130, 20, 240, 20)];
+    
+    self.nome = [NSString stringWithFormat:@"Filme: %@", [[[FilmeStore sharedStore] arrayNomeFilme] objectAtIndex:indexPath.row]];
     
 
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 110, 150)];
-    
-    // ----- Array para Fotos -------
-    
-    NSURL *url = [NSURL URLWithString:[[[FilmeStore sharedStore] arrayFotoFilme] objectAtIndex:indexPath.row]];
-    NSData *data = [[NSData alloc] initWithContentsOfURL:url];
-    imageView.image = [UIImage imageWithData: data];
-    [cell addSubview:imageView];
-    
-    // ------ Fim Array Fotos ------
-    
-    
-    // Botão Célula - Agendar Filme
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-    [button addTarget:self action:@selector(aparecerView:) forControlEvents:UIControlEventTouchUpInside];
-    [button setBackgroundImage:[UIImage imageNamed:@"Layout Feed 01 Agenda.png"] forState: UIControlStateNormal];
-    [button sizeToFit];
-    button.frame = CGRectMake(button.frame.origin.x, button.frame.origin.y, 85, 30);
-    button.center = CGPointMake(335, 135);
-    
-    [cell addSubview:button];
-    // Fim Botão célula
-    
-    // Label Nome do Filme
-    UILabel *labelNome = [[UILabel alloc] initWithFrame:CGRectMake(130, 20, 240, 20)];
+    [labelNome setText:self.nome];
+
     UIFont *font = labelNome.font;
     labelNome.font = [font fontWithSize:14];
-    NSString *nomeFilme = [NSString stringWithFormat:@"Filme: %@", [[[FilmeStore sharedStore] arrayNomeFilme] objectAtIndex:indexPath.row]];
+    //Nome Filme
     
-    [labelNome setText:nomeFilme];
     [cell addSubview:labelNome];
     
-    // Label Diretor do Filme
-    UILabel *labelDiretor = [[UILabel alloc] initWithFrame:CGRectMake(130, 40, 250, 20)];
-    font = labelDiretor.font;
-    labelDiretor.font = [font fontWithSize:14];
-    NSString *diretorFilme = [NSString stringWithFormat:@"Diretor: %@", [[[FilmeStore sharedStore] arrayDiretorFilme] objectAtIndex:indexPath.row]];
-    
-    [labelDiretor setText:diretorFilme];
-    [cell addSubview:labelDiretor];
-    
-    
-    // Label Generos do Filme
-    UILabel *labelGeneros = [[UILabel alloc] initWithFrame:CGRectMake(130, 60, 250, 20)];
-    font = labelGeneros.font;
-    labelGeneros.font = [font fontWithSize:14];
-    NSString *generoFilme = [NSString stringWithFormat:@"Genero: %@", [[[FilmeStore sharedStore] arrayGenerosFilme] objectAtIndex:indexPath.row]];
-
-    
-    [labelGeneros setText:generoFilme];
-    [cell addSubview:labelGeneros];
-    
-    
-    // Label Data do Filme
-    UILabel *labelData = [[UILabel alloc] initWithFrame:CGRectMake(130, 90, 150, 20)];
-    font = labelData.font;
-    labelData.font = [font fontWithSize:16];
-    NSString *dataFilme = [NSString stringWithFormat:@"Data: %@", [[[FilmeStore sharedStore] arrayDataFilme] objectAtIndex:indexPath.row]];
-    [labelData setText:dataFilme];
-    [cell addSubview:labelData];
-     
-     return cell;
 }
+
+//----------------------------------------------------------------------
+
+- (void) getEstreiaFilme: (NSIndexPath*) indexPath SecondObject: (UITableViewCell*) cell {
+    
+    UILabel *labelData = [[UILabel alloc] initWithFrame:CGRectMake(130, 90, 150, 20)];
+    
+    self.data = [NSString stringWithFormat:@"Data: %@", [[[FilmeStore sharedStore] arrayDataFilme] objectAtIndex:indexPath.row]];
+    
+    [labelData setText:self.data];
+    
+    
+    UIFont *font = labelData.font;
+    labelData.font = [font fontWithSize:16];
+    
+    
+    [cell addSubview:labelData];
+    
+}
+
+//----------------------------------------------------------------------
+
+- (void) getGeneroFilme: (NSIndexPath*) indexPath secondObjects: (UITableViewCell*) cell {
+    
+    UILabel *labelGeneros = [[UILabel alloc] initWithFrame:CGRectMake(130, 60, 250, 20)];
+    
+    self.genero = [NSString stringWithFormat:@"Genero: %@", [[[FilmeStore sharedStore] arrayGenerosFilme] objectAtIndex:indexPath.row]];
+    
+    UIFont *font = labelGeneros.font;
+    labelGeneros.font = [font fontWithSize:14];
+    
+    [labelGeneros setText:self.genero];
+    [cell addSubview:labelGeneros];
+}
+
+//----------------------------------------------------------------------
+
+- (void) getDiretorFilme: (NSIndexPath*) indexPath secondObject: (UITableViewCell*) cell {
+    
+    UILabel *labelDiretor = [[UILabel alloc] initWithFrame:CGRectMake(130, 40, 250, 20)];
+    
+    self.diretor = [NSString stringWithFormat:@"Diretor: %@", [[[FilmeStore sharedStore] arrayDiretorFilme] objectAtIndex:indexPath.row]];
+
+    [labelDiretor setText:self.diretor];
+    
+    UIFont *font = labelDiretor.font;
+    labelDiretor.font = [font fontWithSize:14];
+    
+    [cell addSubview:labelDiretor];
+
+}
+
+//----------------------------------------------------------------------
 
 - (IBAction)aparecerView:(id)sender {
     UIButton *button = sender;
@@ -188,6 +253,6 @@
     [self performSegueWithIdentifier:@"agendaView" sender:self];
     
 }
-     
-     
-     @end
+
+
+@end
