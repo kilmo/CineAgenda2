@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewController.h"
 
-@interface FilmeController : UIViewController
+@interface FilmeController : ViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *nomeFilme;
 @property (weak, nonatomic) IBOutlet UILabel *lancamento;

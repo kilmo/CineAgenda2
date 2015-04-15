@@ -26,10 +26,9 @@
 - (void) loadFilme {
 
 PFQuery *query = [PFQuery queryWithClassName:@"filmes"];
-[query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//[query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+    NSArray* objects = [query findObjects];
     
-    if(!error) {
-
         for(int i = 0; i != objects.count; i++)
         {
         PFObject *user = [objects objectAtIndex:i];
@@ -43,11 +42,9 @@ PFQuery *query = [PFQuery queryWithClassName:@"filmes"];
             
         }
     }
-    
-}];
 
 // Fim loadFilme
-}
+
 
 
 - (NSArray *)arrayFotoFilme

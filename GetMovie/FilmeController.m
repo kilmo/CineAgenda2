@@ -71,7 +71,7 @@
             _duracao.numberOfLines = 0;
             [_duracao sizeToFit];
             
-            
+            [self configuracaoLabels];
         }
         else{
             NSString *errorString = [[error userInfo] objectForKey:@"error"];
@@ -79,8 +79,31 @@
         }
         
     }];
+    
 }
+
 //----------------------------------------------
+
+-(void)configuracaoLabels{
+    _lancamento.numberOfLines = 0;
+    [_lancamento sizeToFit];
+    _sinopse.numberOfLines = 0;
+    [_sinopse sizeToFit];
+    _elenco.numberOfLines = 0;
+    [_elenco sizeToFit];
+    _diretor.numberOfLines = 0;
+    [_diretor sizeToFit];
+    _soundtrack.numberOfLines = 0;
+    [_soundtrack sizeToFit];
+    _genero.numberOfLines = 0;
+    [_genero sizeToFit];
+    _classificacao.numberOfLines = 0;
+    [_classificacao sizeToFit];
+    _duracao.numberOfLines = 0;
+    [_duracao sizeToFit];
+    
+}
+
 - (void) setarCores {
    
     self.nomeFilme.textColor = [UIColor redColor];
