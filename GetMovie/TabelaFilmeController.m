@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 LLBE Corp. All rights reserved.
 //
 
-
+@import UIKit;
 #import "FilmeStore.h"
 #import "TabelaFilmeController.h"
 #import <Parse/Parse.h>
@@ -23,15 +23,12 @@
 
 @implementation TabelaFilmeController
 
-- (void)viewDidLoad
-
-    {
+- (void)viewDidLoad{
+    
     [super viewDidLoad];
       
     self.tabelaEstreia.dataSource = self;
     self.tabelaEstreia.delegate = self;
- 
-    
 }
 
 //------------------------------------------------
@@ -71,6 +68,9 @@
     [[store gambiarra]removeAllObjects];
     [[store gambiarra] addObject:stringNome];
     [self presentViewController:tabelaDeFilmes animated:YES completion:nil];
+
+
+
 }
 
 //------------------------------------------------
@@ -85,6 +85,7 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:
 
     (NSIndexPath *)indexPath{
+
     static NSString *simpleTableIdentifier = @"Filmes";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
@@ -168,8 +169,8 @@
     NSString *dataFilme = [NSString stringWithFormat:@"Data: %@", [[[FilmeStore sharedStore] arrayDataFilme] objectAtIndex:indexPath.row]];
     [labelData setText:dataFilme];
     [cell addSubview:labelData];
-     
-     return cell;
+    
+    return cell;
 }
 
 - (IBAction)aparecerView:(id)sender {

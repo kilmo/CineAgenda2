@@ -18,12 +18,14 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    [self setarCorFundo];
+    //[self setarCorFundo];
     
 }
 
 - (IBAction)acaoEntrar:(id)sender {
-    [self logarUsuario];
+   [self performSegueWithIdentifier: @"tabelaFilme" sender: self];
+
+    //[self logarUsuario];
 }
 
 //----------------------------------------------
@@ -51,6 +53,7 @@
             }
             else
             {
+                NSLog(@"Segue");
                 [self performSegueWithIdentifier: @"tabelaFilme" sender: self];
             }
         }

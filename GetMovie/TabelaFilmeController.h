@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewController.h"
 
-@interface TabelaFilmeController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface TabelaFilmeController : ViewController <UITableViewDataSource, UITableViewDelegate>
 
 
 

@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    menu = @[@"first", @"second", @"third", @"teste"];
+    menu = @[@"feed"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,7 +47,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *cellIdentifier = [menu objectAtIndex:indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-    
+    self.tableView.separatorColor = [UIColor clearColor];
     // Configure the cell...
     
     return cell;
